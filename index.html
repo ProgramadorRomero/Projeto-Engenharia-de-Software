@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscaPet</title>
+    <link rel="stylesheet" href="estilos/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="Menu">
+                <a href="#"><img src="imagens/patinha.png" alt="patinha"></a>
+                <a href="#">GATOS</a>
+                <a href="#">CACHORROS</a>
+                <a href="#">COMUNIDADE</a>
+                <a href="#">QUEM SOMOS</a>
+            </div>
+            <div class="Login">
+                <a href="#">Entrar</a>
+                <p>|</p>
+                <a href="#">Cadastro</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+       <div class="main-esq">
+            <h1>
+                Encontre seu <span class="Pet">Pet</span>
+            </h1>
+            <form action="/search" method="get">
+                <input type="search" name="q" placeholder="Pesquisar...">
+                <button type="submit">Pesquisar</button>
+            </form>
+            <p>
+                Mostrando 'x' Pets em um raio de 'y' km 
+            </p>
+            <div>
+                <h2>
+                    Cachorro Macho
+                </h2>
+                <p>
+                    Encontrado - 3km de distância
+                </p>
+                <ul>
+                    <li>Perdido em: </li>
+                    <li>Achado em:</li>
+                    <li>...</li>
+                </ul>
+            </div>
+            <div>
+                <h2>
+                    Gata Fêmea
+                </h2>
+                <p>
+                    Perdida - 200m de distância
+                </p>
+                <ul>
+                    <li>Perdido em: </li>
+                    <li>Achado em:</li>
+                    <li>...</li>
+                </ul>
+            </div>
+
+
+       </div>
+       <img src="imagens/mapa1.png" alt="mapa_1"> 
+    </main>
+</body>
+</html>
