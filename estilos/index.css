@@ -1,14 +1,28 @@
 @charset "UTF-8";
 @import url('https://fonts.cdnfonts.com/css/garet');
 
+/* variáveis css para reutilizar em todos os arquivos (incluindo os importados acima) */
+:root {
+  --cor-fundo: #FBFBFB;
+  --cor-texto: #013D29;
+
+  --patinha-perdida: #C83802;
+  --patinha-encontrada: #00A878;
+  --patinha-achada: #3377FF;
+
+  --azul-escuro: #2649B3;
+  --branco: #FFFFFF;
+  --amarelo: #FFD600;
+
+}
 body{
-    background-color: #F9F9F9;
+    background-color: var(--cor-fundo);
     font-family: 'Garet', sans-serif;
     height: 100%;
 }
 
 header {
-    color: #013D29;
+    color: var(--cor-texto);
     text-shadow: 2px 2px 5px rgb(0 0 0 / 27%);
     height: 20%;
 }
@@ -26,7 +40,7 @@ div.Menu {
 
 .Menu a{
     float: left;
-    color: #013D29;
+    color: var(--cor-texto);
     text-align: center;
     padding: 20px 50px;
     text-decoration: none;
@@ -55,7 +69,7 @@ main {
 }
 
 div.main-esq h1{
-    color: #013D29;
+    color: var(--cor-texto);
 }
 
 div.main-esq h1 .Pet{
