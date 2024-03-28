@@ -1,7 +1,6 @@
 .header__nav {
     display: flex;
-    overflow: hidden;
-    align-items: center;
+    justify-content: space-between;
 
 }
   
@@ -10,6 +9,7 @@
     display: flex;
     position: relative;
     padding: 20px;
+
 }
   
 .header__logo-overlay {
@@ -29,6 +29,7 @@
     justify-content: flex-end;
     gap: 64px;
     list-style: none;
+
 }
   
 .header__menu li {
@@ -40,7 +41,7 @@
     line-height: 20px;
     cursor: pointer;
 }
-  
+
 .header__menu li img {
     width: 24px;
     height: 24px;
@@ -50,6 +51,28 @@
 .header__menu-mobile {
     display: none;
     gap: 20px;
-  
     position: relative;
+}
+
+div.Login {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.Login a{
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-left: auto; 
+    display: flex; 
+    align-items: center;
+}
+
+div.header-esq{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mapa{
+    background-color: brown;
 }

@@ -2,7 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/garet');
 
 /* outros arquivos css importados */
-@import url("sessoes/header.css");
+@import url("header.css");
 
 /* variáveis css para reutilizar em todos os arquivos (incluindo os importados acima) */
 :root {
@@ -24,13 +24,18 @@ body {
     background-color: var(--cor-fundo);
     font-family: var(--garet);
     height: 100%;
-    margin: 0 auto;
-    max-width: 1280px;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
     color: var(--cor-texto);
+    font-weight: bold;
+}
+
+a:hover{
+    color: rgb(116, 202, 125);
 }
 
 .flex-center {
@@ -44,25 +49,11 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-  
-div.Login {
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
-}
-
-.Login a{
-    padding: 10px 20px;
-    font-size: 15px;
-    margin-left: auto; 
-    display: flex; 
-    align-items: center; 
-}
 
 main {
     display: flex;
     justify-content: space-between;
-    height: 80%;
+    height: 100%;
 }
 
 div.main-esq h1{
@@ -72,3 +63,81 @@ div.main-esq h1{
 div.main-esq h1 .Pet{
     color: var(--azul-escuro);
 }
+
+div.main-esq{
+    margin-left: 30px;
+}
+
+
+
+input{
+
+    width: 380px; /* largura da barra de pesquisa */
+    padding: 15px; /* espaço interno */
+    font-size: 16px; /* tamanho da fonte */
+    border: 0px ; /* borda */
+    border-radius: 2px; /* cantos arredondados */
+    outline: none;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+}
+
+.p_input{
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* Aplica o negrito */
+}
+
+.cachorro_box{
+    width: 350px; /* largura */
+    padding: 15px; /* espaço interno */
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* tamanho da fonte */
+    border: 0px ; /* borda */
+    border-radius: 2px; /* cantos arredondados */
+    outline: none;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gato_box{
+    width: 350px; /* largura  */
+    padding: 15px; /* espaço interno */
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* tamanho da fonte */
+    border: 0px ; /* borda */
+    border-radius: 2px; /* cantos arredondados */
+    outline: none;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cachorro_esq > h2 {
+    color: #2649B3;
+}
+
+.gato_esq > h2{
+    color: #C83802;
+}
+
+.mapa{
+    display: flex;
+    align-items:end;
+    margin-right: 400px;
+    background-color: var(--cor-fundo);
+}
+
+.mapa > img {
+    height: 80%;
+
+}
+
+
+
+
