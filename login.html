@@ -7,8 +7,8 @@
   <title>Login</title>
 </head>
     <body>
-    <div class="overlay"></div> 
-    <div class='container'>
+    <div class="overlay"><a href="index.html">Menu</a></div>
+    <div class='container'> 
       <div class='card'>
         <h1> Login </h1>
         
@@ -23,8 +23,9 @@
           <i class="fa fa-eye"></i>
         </div>
         <div id='msgError'></div>
+        
         <div id="forgot">
-          <a href="#" id="forgotPassword">Esqueceu sua senha?</a>
+          <a href="#" id="forgotPassword" onclick='esqueceuSenha()'>Esqueceu sua senha?</a>
         </div>
 
         <div class='botao'>
@@ -34,6 +35,7 @@
         <div class='botao'>
           <button class="cadastrar-button" onclick="window.location.href='cadastro.html'">Cadastre-se</button>
         </div>
+
       </div>
       </div>
       <script src="script/login.js"></script>
