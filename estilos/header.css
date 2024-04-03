@@ -37,7 +37,7 @@
     font-weight: bold;
     font-family: var(--garet);
     color: var(--cor-texto);
-    font-size: 16.3px;
+    font-size: 20px;
     line-height: 20px;
     cursor: pointer;
 }
@@ -62,7 +62,7 @@ div.Login {
 
 .Login a{
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 18px;
     margin-left: auto; 
     display: flex; 
     align-items: center;
@@ -75,4 +75,9 @@ div.header-esq{
 
 .mapa{
     background-color: brown;
+}
+
+.link-gatos.gatos, .link-gatos:hover {
+    color: var(--patinha-perdida);
+    text-decoration: underline; /* Sublinhado */
 }

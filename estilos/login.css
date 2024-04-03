@@ -1,5 +1,4 @@
 @import url('https://fonts.cdnfonts.com/css/garet');
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 * {
   font-family: 'garet', sans-serif;
@@ -42,7 +41,7 @@ h1{
   font-size: 33px;
   text-align: left;
   margin-bottom: 20px;
-  color: #013D29;
+  color: #013D29
 }
 
 .label-float input{
@@ -99,7 +98,7 @@ h1{
 }
 
 #forgotPassword {
-  color: #013D29; 
+  color: black; 
 }
 
 .botao{
@@ -110,35 +109,37 @@ h1{
 .entrar-button{
   background-color: #3377FF;
   border-color: #3377FF;
-  color: white;
-  padding: 7px;
-  font-size: 12pt;
+  color: #e1e1e1;
+  padding: 15px;
+  font-size: 10.3pt;
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
   transition: all .4s ease-out;
-  width: 50%;
+  width: 90%;
+  font-weight: bold;
 }
 
 .cadastrar-button{
   background-color: #00A878;
   border-color: #00A878;
-  color: white;
-  padding: 7px;
-  font-size: 12pt;
+  color: #e1e1e1;
+  padding: 15px;
+  font-size: 10.3pt;
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
   transition: all .4s ease-out;
-  width: 50%;
+  width: 90%;
+  font-weight: bold;
 }
 
 button:hover{
   background-color: #8D9196;
   border-color: #8D9196;
-  color: #fff;
+  color: #e1e1e1;
 }
 
 .fa-eye{
