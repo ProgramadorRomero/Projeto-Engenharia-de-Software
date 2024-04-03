@@ -40,7 +40,7 @@ function entrar(){
   })
    
   if((usuario.value === userValid.user || usuario.value === userValid.email) && senha.value == userValid.senha){
-    window.location.href = 'home.html'
+    window.location.href = 'index.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
@@ -59,4 +59,12 @@ function entrar(){
   
 }
 
-
+function esqueceuSenha() {
+  let usuario = document.querySelector('#usuario').value;
+  if (usuario == '') {
+    alert('Por favor, insira seu nome de usuário ou e-mail.');
+    return false;
+  }
+  // falta relacionar ao banco de dados
+  alert('Um e-mail foi enviado para ' + usuario + ' com instruções para redefinir sua senha.');
+}
