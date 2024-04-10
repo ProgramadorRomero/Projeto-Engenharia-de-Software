@@ -91,9 +91,42 @@
 
 
        </div>
-        <div class="mapa">
-            <img src="imagens/mapa1.png" alt="mapa_1">
-        </div> 
+        <div id="map" class="map-container"></div>
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+            <script>
+            var map = L.map('map').setView([-23.671615, -46.562279], 13);
+
+            // Use OpenStreetMap basemap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Ícones personalizados
+            var lostDogIcon = L.icon({
+            iconUrl: 'imagens/patinha vermelha.png',
+            shadowSize: [50, 64],
+            iconAnchor: [22, 94],
+            shadowAnchor: [4, 62],
+            popupAnchor: [-3, -76]
+            });
+
+            var foundDogIcon = L.icon({
+            iconUrl: 'imagens/patinha verde.png',
+            shadowSize: [50, 64],
+            iconAnchor: [22, 94],
+            shadowAnchor: [4, 62],
+            popupAnchor: [-3, -76]
+            });
+
+            // Marcadores com ícones e popups
+            L.marker([-23.671615, -46.562279], {icon: lostDogIcon}).addTo(map).bindPopup("Cachorro perdido.");
+            L.marker([51.495, -0.083], {icon: foundDogIcon}).addTo(map).bindPopup("Cachorro encontrado!");
+
+
+            L.Control.geocoder().addTo(map);
+            </script>
     </main>
 </body>
 </html>
