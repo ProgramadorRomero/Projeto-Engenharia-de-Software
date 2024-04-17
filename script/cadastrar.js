@@ -1,7 +1,6 @@
 let btn = document.querySelector('#verSenha')
 let btnConfirm = document.querySelector('#verConfirmSenha')
 
-
 let nome = document.querySelector('#nome')
 let labelNome = document.querySelector('#labelNome')
 let validNome = false
@@ -21,6 +20,10 @@ let validSenha = false
 let confirmSenha = document.querySelector('#confirmSenha')
 let labelConfirmSenha = document.querySelector('#labelConfirmSenha')
 let validConfirmSenha = false
+
+let dataNascimento = document.querySelector('#dataNascimento');
+let labelDataNascimento = document.querySelector('#labelDataNascimento');
+let validDataNascimento = false;
 
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
@@ -97,61 +100,98 @@ confirmSenha.addEventListener('keyup', () => {
   }
 })
 
-function cadastrar(){
-  if(validNome && validEmail && validUsuario && validSenha && validConfirmSenha){
-    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-    
-    listaUser.push(
-    {
-      nomeCad: nome.value,
-      emailCad: email.value,
-      userCad: usuario.value,
-      senhaCad: senha.value
-    }
-    )
-    
-    localStorage.setItem('listaUser', JSON.stringify(listaUser))
-    
-   
-    msgSuccess.setAttribute('style', 'display: block')
-    msgSuccess.innerHTML = 'Cadastrando usuário...'
-    msgError.setAttribute('style', 'display: none')
-    msgError.innerHTML = ''
-    
-    setTimeout(()=>{
-        window.location.href = 'login.html'
-    }, 2000)
-  
-    
+dataNascimento.addEventListener('change', () => {
+  if (!dataNascimento.value) {
+    labelDataNascimento.setAttribute('style', 'color: red');
+    labelDataNascimento.innerHTML = 'Data de Nascimento *Insira sua data de nascimento';
+    validDataNascimento = false;
   } else {
-    msgError.setAttribute('style', 'display: block')
-    msgError.innerHTML = 'Preencha todos os campos corretamente antes de cadastrar.'
-    msgSuccess.innerHTML = ''
-    msgSuccess.setAttribute('style', 'display: none')
+    labelDataNascimento.setAttribute('style', 'color: green');
+    labelDataNascimento.innerHTML = 'Data de Nascimento';
+    validDataNascimento = true;
+  }
+});
+
+function verificarCamposVazios() {
+  if (nome.value === "" || email.value === "" || usuario.value === "" || senha.value === "" || confirmSenha.value === "" || dataNascimento.value === "") {
+    // Se algum campo estiver vazio, altere a borda de todas as caixas de entrada para vermelho
+    nome.style.borderColor = "red";
+    email.style.borderColor = "red";
+    usuario.style.borderColor = "red";
+    senha.style.borderColor = "red";
+    confirmSenha.style.borderColor = "red";
+    dataNascimento.style.borderColor = "red";
+    
+    return true; // Retorna true indicando que há campos vazios
+  }
+  
+  return false; // Retorna false indicando que todos os campos estão preenchidos
+}
+
+
+function cadastrar() {
+  if (validNome && validEmail && validUsuario && validSenha && validConfirmSenha) {
+    // If all fields are valid, proceed with registration
+    if (!verificarCamposVazios()) { // Check for empty fields again
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "cadastro.php", true); // Replace with your registration script
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+      // Prepare data to send (consider using FormData for easier handling)
+      let data = `nome=${nome.value}&email=${email.value}&usuario=${usuario.value}&senha=${senha.value}&dataNascimento=${dataNascimento.value}`;
+
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          // Registration successful
+          msgSuccess.setAttribute('style', 'display: block');
+          msgSuccess.innerHTML = 'Cadastro realizado com sucesso!';
+          msgError.setAttribute('style', 'display: none');
+          msgError.innerHTML = '';
+
+          setTimeout(() => {
+            window.location.href = 'login.html';
+          }, 2000);
+        } else {
+          // Registration failed
+          msgError.setAttribute('style', 'display: block');
+          msgError.innerHTML = 'Erro ao cadastrar usuário. Tente novamente.';
+          msgSuccess.innerHTML = '';
+          msgSuccess.setAttribute('style', 'display: none');
+        }
+      };
+
+      xhr.onerror = function() {
+        console.error("Erro na requisição AJAX");
+      };
+
+      xhr.send(data);
+    }
+  } else {
+    msgError.setAttribute('style', 'display: block');
+    msgError.innerHTML = 'Preencha todos os campos corretamente antes de cadastrar.';
+    msgSuccess.innerHTML = '';
+    msgSuccess.setAttribute('style', 'display: none');
   }
 }
 
-btn.addEventListener('click', ()=>{
-  let inputSenha = document.querySelector('#senha')
-  
-  if(inputSenha.getAttribute('type') == 'password'){
-    inputSenha.setAttribute('type', 'text')
-  } else {
-    inputSenha.setAttribute('type', 'password')
-  }
-})
+if (btn && btnConfirm) {
+  btn.addEventListener('click', ()=>{
+    let inputSenha = document.querySelector('#senha')
+    
+    if(inputSenha.getAttribute('type') == 'password'){
+      inputSenha.setAttribute('type', 'text')
+    } else {
+      inputSenha.setAttribute('type', 'password')
+    }
+  })
 
-btnConfirm.addEventListener('click', ()=>{
-  let inputConfirmSenha = document.querySelector('#confirmSenha')
-  
-  if(inputConfirmSenha.getAttribute('type') == 'password'){
-    inputConfirmSenha.setAttribute('type', 'text')
-  } else {
-    inputConfirmSenha.setAttribute('type', 'password')
-  }
-})
-
-
-
-  
-  
+  btnConfirm.addEventListener('click', ()=>{
+    let inputConfirmSenha = document.querySelector('#confirmSenha')
+    
+    if(inputConfirmSenha.getAttribute('type') == 'password'){
+      inputConfirmSenha.setAttribute('type', 'text')
+    } else {
+      inputConfirmSenha.setAttribute('type', 'password')
+    }
+  })
+}
