@@ -1,0 +1,131 @@
+/* Arquivo: estilos/cadastroPet.css */
+
+/* Importações de fontes */
+@charset "UTF-8";
+@import url('https://fonts.cdnfonts.com/css/garet');
+@import url("header.css");
+@import url("index.css");
+
+/* Estilos gerais */
+.center {
+  display: block; /* Garante que ocupe a largura total disponível */
+  width: 100%; /* Garante que ocupe a largura total disponível */
+}
+
+.titulo {
+  text-align: center; /* Para centralizar horizontalmente */
+  color: #2649B3;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 5px; /* Ajuste conforme necessário para espaçamento superior */
+  margin-bottom: 50px; /* Ajuste conforme necessário para espaçamento inferior */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%;
+  margin-top: 150px;
+  position: relative;
+}
+.card {
+  background-color: #F9F9F9;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 1px 0px #00000060;
+  width: 50%;
+  height: 500px; /* Adjust card height as needed */
+  position: relative;
+}
+
+
+/* Estilos para seções do formulário */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex-basis: 33%; /* Divida o espaço em 3 colunas iguais */
+}
+
+.label-float {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 3%;
+  margin-right: 50px;
+}
+
+.label-float input {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  border: 1.5px solid black;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 4px;
+}
+
+.label-float input:focus {
+  border-color: #00A878; /* Altera a cor da borda quando em foco */
+}
+
+.label-float label {
+  color: #013D29;
+  position: absolute;
+  top: -10px; /* Ajusta a posição do rótulo para cima */
+  font-size: 16px; /* Ajusta o tamanho do rótulo */
+  transition: all .3s ease-out;
+  background-color: white; /* Adiciona um fundo branco atrás do rótulo */
+  padding: 0 5px; /* Adiciona um preenchimento ao rótulo */
+}
+
+/* Estilos para o botão de cadastro */
+button {
+  background-color: #2649B3;
+  border-color: #2649B3;
+  width: 40%;
+  height: 60px;
+  color: white;
+  padding: 7px;
+  font-size: 12pt;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+button:hover {
+  background-color: #8D9196;
+  border-color: #8D9196;
+  color: #fff;
+}
+
+/* Estilos para mensagens de erro e sucesso (ajuste como necessário) */
+.msgError {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 12px;
+  color: #C83802;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+.msgSuccess {
+  text-align: center;
+  color: #00A878;
+  background-color: #bbffbe;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
