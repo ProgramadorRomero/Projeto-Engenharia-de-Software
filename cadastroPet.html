@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscaPet</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBm3TCWXyQXpG5p6XRGEVpqYfdkwbCzHs&libraries=places"></script>
+    <link rel="stylesheet" href="estilos/cadastroPet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>  
+        <nav class="header__nav">
+            <div class="header-esq"> 
+                <div class="header__logo">
+                    <a href="index.html"><img src="imagens/patinha.png" alt="patinha"></a>
+                    <div class="header__logo-overlay"></div>
+                </div>
+                <ul class="header__menu">
+                    <li>
+                        <a href="gatos.html" class="link-gatos">GATOS</a>
+                    </li>
+                    <li>
+                        <a href="cachorros.html">CACHORROS</a>
+                    </li>
+                    <li>
+                        <a href="#outros">OUTROS</a>
+                    </li>
+                    <li>
+                        <a href="#comunidade">COMUNIDADE</a>
+                    </li>
+                    <li>
+                        <a href="#quem-somos">QUEM SOMOS</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="header__menu-mobile">
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="center">
+        <div class="titulo">
+            CADASTRE UM PET
+        </div>
+        <div class='container'>
+            <div class='card'>
+                <form id="petForm" action="pet.php" method="post">
+                <div class="row">
+                    <div class="column">
+                        <div class="label-float photo-container">
+                            <input type="file" id="fotoPet" accept="image/camera.png" required>
+                            <label for="fotoPet">
+                                <i class="fas fa-camera"></i> Adicionar Foto
+                            </label>
+                        </div>
+
+                        <div class="label-float">
+                            <input type="text" id="nomePet" placeholder=" " required>
+                            <label for="nomePet">Nome do Pet</label>
+                        </div>
+
+                        <div class="label-float">
+                            <select id="estadoPet">
+                                <option value="achado">Achado</option>
+                                <option value="encontrado">Encontrado</option>
+                                <option value="perdido">Perdido</option>
+                            </select>
+                            <label for="estadoPet">Estado do Pet</label>
+                        </div>
+
+                        <div class="label-float">
+                            <select id="tipoPet" required onchange="checkOutro(this)">
+                                <option value="gato">Gato</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <label for="tipoPet">Tipo de Animal</label>
+                        </div>
+
+                        <div id="outroContainer" class="label-float" style="display: none;">
+                            <input type="text" id="outroTipoPet" placeholder=" ">
+                            <label for="outroTipoPet">Especifique</label>
+                        </div>
+
+                        <div class="label-float">
+                            <select id="generoPet" required>
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="indefinido">Indefinido</option>
+                            </select>
+                            <label for="generoPet">Gênero do Pet</label>
+                        </div>
+                    
+                        <div class="label-float">
+                            <input type="text" id="enderecoUltimaVez" placeholder="Endereço Visto pela Última Vez" required>
+                            <label for="enderecoUltimaVez">Endereço Visto pela Última Vez</label>
+                        </div>
+
+                        <div class="label-float">
+                            <input type="datetime-local" id="dataHoraOcorrido" placeholder=" " required>
+                            <label for="dataHoraOcorrido">Data e Hora do Ocorrido</label>
+                        </div>
+
+                        <div class="label-float">
+                            <input type="text" id="nomeContato" placeholder=" " required>
+                            <label for="nomeContato">Nome para Contato</label>
+                        </div>
+
+                        <div class="label-float">
+                            <input type="tel" id="telefoneContato" placeholder=" " required>
+                            <label for="telefoneContato">Telefone para Contato</label>
+                        </div>
+
+                        <div class="label-float">
+                            <input type="email" id="emailContato" placeholder=" ">
+                            <label for="emailContato">Email para Contato</label>
+                        </div>
+                        
+                        <div class="label-float">
+                            <input type="text" id="redeSocialContato" placeholder=" ">
+                            <label for="redeSocialContato">Rede Social (opcional)</label>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                
+                <div id='msgError'></div>
+                        
+                <div class='justify-center'>
+                    <button onclick='cadastrarPet()'>Cadastrar Pet</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script>
+        function initAutocomplete() {
+            var input = document.getElementById('enderecoUltimaVez');
+            var autocomplete = new google.maps.places.Autocomplete(input);
+        }
+        google.maps.event.addDomListener(window, 'load', initAutocomplete);
+    </script>
+    
+    <script src="script/cadastrarPet.js"></script>
+
+</body>
+</html>

@@ -7,50 +7,66 @@
   <title>Cadastro</title>
 </head>
 <body>
+  <div class="overlay"></div>
+  <a href="index.html">Menu</a>
   <div class='container'>
     <div class='card'>
+      <form method="post" action="cadastro.php">
       <h1> Cadastrar </h1>
   
-      <div id='msgSuccess'></div>
-      
-      <div class="label-float">
-        <input type="text" id="nome" placeholder=" " required>
-        <label id="labelNome" for="nome">Nome</label>
-      </div>
-      
-      <div class="label-float">
-        <input type="email" id="email" placeholder=" " required>
-        <label id="labelEmail" for="email">Email</label>
-      </div>
-
-      <div class="label-float">
-        <input type="text" id="usuario" placeholder=" " required>
-        <label id="labelUsuario" for="usuario">Usuário</label>
-      </div>
-        
-      <div class="label-float">
-        <input type="password" id="senha" placeholder=" " required>
-        <label id="labelSenha" for="senha">Senha</label>
-        <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
-      </div>
-
-      <div class="label-float">
-        <input type="password" id="confirmSenha" placeholder=" " required>
-        <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
-        <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+      <div class="row">
+        <div class="column">
+          <div class="label-float">
+            <input type="text" id="nome" placeholder=" " required>
+            <label id="labelNome" for="nome">Nome</label>
+          </div>
+  
+          <div class="label-float">
+            <input type="text" id="usuario" placeholder=" " required>
+            <label id="labelUsuario" for="usuario">Usuário</label>
+          </div>
+  
+          <div class="label-float">
+            <input type="password" id="senha" placeholder=" " required>
+            <label id="labelSenha" for="senha">Senha</label>
+            <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="label-float">
+            <input type="email" id="email" placeholder=" " required>
+            <label id="labelEmail" for="email">Email</label>
+          </div>
+  
+          <div class="label-float">
+            <input type="date" id="dataNascimento" placeholder=" " required>
+            <label id="labelDataNascimento" for="dataNascimento">Data de Nascimento</label>
+          </div>
+  
+          <div class="label-float">
+            <input type="password" id="confirmSenha" placeholder=" " required>
+            <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
+            <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+          </div>
+        </div>
       </div>
       
       <div id='msgError'></div>
+
+      <div id='msgSuccess'></div>
               
       <div class='justify-center'>
-        <button onclick='cadastrar()'>Cadastrar</button>
+        <button type="button" onclick='cadastrar()'>Cadastre-se</button>
       </div>
-
+  
       <p> Já possui uma conta?
         <a class="login" href='login.html'> Entrar </a>
       </p>
-
+    </form>
     </div>
   </div>
+  <script src="script/cadastrar.js"></script>
+  
 </body>
 </html>
