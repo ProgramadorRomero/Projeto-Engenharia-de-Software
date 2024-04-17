@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="estilos/login.css" media="screen" /> 
+  <title>Login</title>
+</head>
+<body>
+  <div class="overlay"><a href="index.html">Menu</a></div>
+  <div class='container'> 
+    <div class='card'>
+      <form method="post" action="login.php">
+      <h1> Login </h1>
+        
+      <div class='label-float'>
+        <input type='text' id='usuario' name='usuario' placeholder='' required>
+        <label id='userLabel' for='usuario'>Usuário ou Email</label>
+      </div>
+        
+      <div class='label-float'>
+        <input type='password' id='senha' name='senha' placeholder='' required>
+        <label id='senhaLabel' for='senha'>Senha</label>
+        <i class="fa fa-eye"></i>
+      </div>
+      <div id='msgError'></div>
+      
+      <div class="lembrarSenha">
+        <input type="checkbox" id="lembrarSenhaCheckbox">
+        <label for="lembrarSenhaCheckbox">Lembrar senha</label>
+      </div>
+
+        
+      <div id="forgot">
+        <a href="#" id="forgotPassword" onclick='esqueceuSenha()'>Esqueceu sua senha?</a>
+      </div>
+
+      <div class='botao'>
+        <button class="entrar-button" onclick='entrar()'>Entrar</button>
+      </div>
+        
+      <div class='botao'>
+        <button class="cadastrar-button" onclick="window.location.href='cadastro.html'">Cadastre-se</button>
+      </div>
+    </form>
+    </div>
+  </div>
+  <script src="script/login.js"></script>
+</body>
+</html>
