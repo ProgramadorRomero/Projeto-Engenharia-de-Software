@@ -1,0 +1,158 @@
+@import url('https://fonts.cdnfonts.com/css/garet');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+  font-family: 'garet', sans-serif;
+}
+
+body {
+  background-image: url(../imagens/mapa2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  position: absolute;
+  justify-content: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.card {
+  background-color: #F9F9F9;
+  padding: 40px; /* Aumente o preenchimento interno para dar mais espaço dentro da caixa */
+  border-radius: 4%;
+  box-shadow: 3px 3px 1px 0px #00000060;
+  width: 90%; /* Ajuste a largura conforme necessário */
+  max-width: 500px; /* Defina uma largura máxima para evitar que a caixa fique muito larga em telas grandes */
+  margin: auto; /* Centralize o elemento horizontalmente */
+}
+
+h1{
+  font-size: 33px;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #013D29
+}
+
+.label-float input{
+  width: 100%;
+  padding: 15px; /* Ajuste o preenchimento conforme necessário */
+  display: inline-block;
+  border: 1.5px solid #010101; /* Adiciona borda a todos os lados */
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 4px; /* Arredonda as bordas */
+}
+
+.label-float {
+  width: calc(100% - 50px); /* Ajuste conforme necessário */
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-right: 50px; /* Ajuste conforme necessário */
+}
+
+.label-float input:focus{
+  border-color: #00A878; 
+}
+
+.label-float label{
+  color: black;
+  position: absolute;
+  top: -10px; /* Ajusta a posição do rótulo para cima */
+  font-size: 16px; /* Ajusta o tamanho do rótulo */
+  transition: all .3s ease-out;
+  padding: 0 5px; /* Adiciona um preenchimento ao rótulo */
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  top: -10px; 
+  font-size: 14px;
+  color: #00A878;
+}
+
+
+#forgot {
+  text-align: right;
+  font-size: 13px
+}
+
+#forgotPassword {
+  color: black; 
+}
+
+.botao{
+  display: flex;
+  justify-content: center;
+}
+
+.entrar-button{
+  background-color: #3377FF;
+  border-color: #3377FF;
+  color: #e1e1e1;
+  padding: 15px;
+  font-size: 10.3pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+  width: 90%;
+  font-weight: bold;
+}
+
+.cadastrar-button{
+  background-color: #00A878;
+  border-color: #00A878;
+  color: #e1e1e1;
+  padding: 15px;
+  font-size: 10.3pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+  width: 90%;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: #8D9196;
+  border-color: #8D9196;
+  color: #e1e1e1;
+}
+
+.fa-eye{
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+ #msgError{
+  text-align: center;
+  color: #C83802;
+  background-color: #ffbbbb;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}

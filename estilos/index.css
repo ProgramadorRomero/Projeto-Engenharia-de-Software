@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url('https://fonts.cdnfonts.com/css/garet');
+@import url('https://unpkg.com/leaflet/dist/leaflet.css');
+@import url('https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css');
+
+/* outros arquivos css importados */
+@import url("header.css");
+
+/* variáveis css para reutilizar em todos os arquivos (incluindo os importados acima) */
+:root {
+  --cor-fundo: #FBFBFB;
+  --cor-texto: #013D29;
+
+  --patinha-perdida: #C83802;
+  --patinha-encontrada: #00A878;
+  --patinha-achada: #3377FF;
+
+  --azul-escuro: #2649B3;
+  --branco: #FFFFFF;
+  --amarelo: #FFD600;
+
+  --garet: "Garet", sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--garet);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: bold;
+}
+
+a:hover{
+    color: rgb(116, 202, 125);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+div.main-esq h1{
+    color: var(--cor-texto);
+}
+
+div.main-esq h1 .Pet{
+    color: var(--azul-escuro);
+}
+
+div.main-esq{
+    margin-left: 30px;
+}
+
+input{
+
+    width: 400px; /* largura da barra de pesquisa */
+    padding: 15px; /* espaço interno */
+    font-size: 16px; /* tamanho da fonte */
+    border: 0px ; /* borda */
+    border-radius: 2px; /* cantos arredondados */
+    outline: none;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+}
+
+.p_input{
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* Aplica o negrito */
+}
+
+.cachorro_box{
+    width: 400px; /* largura */
+    padding: 15px; /* espaço interno */
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* tamanho da fonte */
+    border: 0px ; /* borda */
+    border-radius: 2px; /* cantos arredondados */
+    outline: none;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gato_box{
+    width: 400px; /* largura  */
+    padding: 15px; /* espaço interno */
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* tamanho da fonte */
+    border: 0px ; /* borda */
+    border-radius: 2px; /* cantos arredondados */
+    outline: none;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cachorro_esq > h2 {
+    color: #2649B3;
+}
+
+.gato_esq > h2{
+    color: #C83802;
+}
+
+.map-container {
+    width: 60%; /* Defina a largura desejada */
+    height: 700px;
+    margin-top: 50px; 
+    margin-right: 150px; 
+    background-color: gray;
+}

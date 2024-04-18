@@ -1,0 +1,182 @@
+@charset "UTF-8";
+@import url('https://fonts.cdnfonts.com/css/garet');
+@import url("header.css");
+@import url("index.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'garet', sans-serif;
+  }
+
+.container {
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2649B3;
+    font-size: 36px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    background-color:var(--cor-fundo);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px
+}
+
+input::placeholder {
+    font-size: 12px; /* Tamanho da fonte do placeholder */
+  }
+
+input{
+    border-radius: 10px;
+}
+
+select{
+    border-radius: 10px;
+}
+
+textarea{
+    border-radius: 10px;
+}
+
+.form-group{
+    color: var(--cor-texto);
+    
+}
+
+label{
+    display: flex;
+    justify-content: center;
+}
+
+.foto>div>input{
+    height: 300px;
+    width: 400px; /* largura */
+    padding: 15px; /* espaço interno */
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* tamanho da fonte */
+    border: 1px dotted black ; /* borda */
+    border-radius: 2px; /* cantos arredondados */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+}
+
+.custom-file-upload {
+    display: flex;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4b4f53;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    justify-content: center;
+    width: 82%;
+}
+
+.custom-file-upload:hover {
+    background-color: #d3dae2;
+}
+
+.foto-space{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 300px; /* largura */
+    padding: 15px; /* espaço interno */
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* tamanho da fonte */
+    border: 1px dotted gray ; /* borda */
+    border-radius: 5px; /* cantos arredondados */
+    outline: none;
+    margin-right: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+    margin-top: 10px;
+    color: black;
+}
+
+.foto-space-mini-child{
+    height: 50px;
+    width: 60px; /* largura */
+    padding: 15px; /* espaço interno */
+    font-size: 14px; /* Define o tamanho da fonte para 14 pixels */
+    font-weight: bold; /* tamanho da fonte */
+    border: 1px dotted gray ; /* borda */
+    border-radius: 5px; /* cantos arredondados */
+    outline: none;
+    margin-right: 28px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+    margin-top: 10px;
+}
+
+.foto-space-mini{
+    display: flex;
+
+}
+
+.first-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.form-pet>button{
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    background-color:  #4b4f53;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-pet>button:hover{
+    background-color: #d3dae2;
+}
+
+.form-pet{
+    margin-left: 200px;
+}
+

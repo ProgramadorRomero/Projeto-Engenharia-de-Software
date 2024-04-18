@@ -1,0 +1,106 @@
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+  
+.header__logo {
+    flex: 1;
+    display: flex;
+    position: relative;
+    padding: 30px;
+
+}
+  
+.header__logo-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  
+    background-color: var(--cor-fundo);
+    z-index: -1;
+}
+  
+.header__menu, .header__menu-mobile {
+    padding: 20px;
+    flex: 1.236;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 64px;
+    list-style: none;
+
+}
+  
+.header__menu li {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--garet);
+    color: var(--cor-texto);
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.header__menu li img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+  
+.header__menu-mobile {
+    display: none;
+    gap: 20px;
+    position: relative;
+}
+
+div.Login {
+    margin-right: 30px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.Login a{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: auto; 
+    display: flex; 
+    align-items: center;
+}
+
+div.header-esq{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mapa{
+    background-color: brown;
+}
+
+.link-gatos.gatos, .link-gatos:hover {
+    color: var(--patinha-perdida);
+    text-decoration: underline; /* Sublinhado */
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cadastrarPet-button{
+    font-family: var(--garet);
+    background-color: #2649b3;
+    border-color: #2649b3;
+    color: #e1e1e1;
+    padding: 8px;
+    font-size: 12.3pt;
+    margin-top: 0px;
+    margin-right: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+    width: 80%;
+    font-weight: bold;
+  }

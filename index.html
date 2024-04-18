@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscaPet</title>
+    <link rel="stylesheet" href="estilos/index.css">
+</head>
+<body>
+    <header>  
+        <nav class="header__nav">
+            <div class="header-esq"> 
+                <div class="header__logo">
+                    <a href="index.html"><img src="imagens/patinha.png" alt="patinha"></a>
+                    <div class="header__logo-overlay"></div>
+                </div>
+                <ul class="header__menu">
+                    <li>
+                        <a href="gatos.html" class="link-gatos">GATOS</a>
+                    </li>
+                    <li>
+                        <a href="cachorros.html">CACHORROS</a>
+                    </li>
+                    <li>
+                        <a href="#outros">OUTROS</a>
+                    </li>
+                    <li>
+                        <a href="#comunidade">COMUNIDADE</a>
+                    </li>
+                    <li>
+                        <a href="#quem-somos">QUEM SOMOS</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="header__menu-mobile">
+            </ul>
+            </div>
+            <div class="header-dir">
+                <div class="Login">
+                    <a href="login.html">Entrar</a>
+                    <p>|</p>
+                    <a href="cadastro.html">Cadastro</a>
+                </div>
+                <div class='botao'>
+                    <br>
+                    <a href="cadastroPet.html"><button class="cadastrarPet-button" onclick='pet()'>CADASTRE UM PET</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+       <div class="main-esq">
+            <h1>
+                Encontre seu <span class="Pet">Pet</span>
+            </h1>
+            <form id="search-form">
+                <input type="search" id="search-input" placeholder="Pesquisar...">
+                <button type="submit">Buscar</button>
+            </form>
+            <p class="p_input">
+                Mostrando 'x' Pets em um raio de 'y' km 
+            </p>
+            <div class="cachorro_box">
+                    <div class="cachorro_esq">
+                        <h2>
+                            Cachorro Macho
+                        </h2>
+                        <p>
+                            Encontrado - 3km de distância
+                        </p>
+                        <ul>
+                            <li>Perdido em: </li>
+                            <li>Achado em:</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <img src="imagens/cachorro.png" alt="cachorro" class="img_cachorro">
+                
+            </div>
+            <div class="gato_box">
+                <div class="gato_esq">
+                    <h2>
+                        Gata Fêmea
+                    </h2>
+                    <p>
+                        Perdida - 200m de distância
+                    </p>
+                    <ul>
+                        <li>Perdido em: </li>
+                        <li>Achado em:</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+                <img src="imagens/gato.png" alt="gato" class="img_gato">
+            </div>
+
+
+       </div>
+        <div id="map" class="map-container"></div>
+        <script src="script/mapa.js">
+            
+            
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBm3TCWXyQXpG5p6XRGEVpqYfdkwbCzHs&callback=initMap"
+        async defer></script>
+        <script src="script/login.js"></script>
+    </main>
+</body>
+</html>
