@@ -1,0 +1,33 @@
+@import url("index.css");
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: var(--cor-texto); 
+    margin-bottom: 20px; 
+}
+
+.opcoes {
+    display: flex;
+    gap: 20px; 
+    color: var(--cor-texto)
+}
+
+.opcoes a {
+    text-decoration: none;
+    font-size: 18px; 
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.gato_box {
+    width: 50;
+    background-color: var(--branco);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.219); /* adicionar sombra */
+    padding: 10px; 
+    margin-right: 50px;
+}
